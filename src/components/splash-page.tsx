@@ -3,10 +3,10 @@
 import { useState, useEffect, useRef } from 'react'
 import { Search } from 'lucide-react'
 import useInteractionStore from '@/hooks/use-interaction'
+
 export default function SplashPage() {
   const [text, setText] = useState('')
-  const [setShowCursor] = useState<boolean>(false);
-
+  const [showCursor, setShowCursor] = useState<boolean>(true)
  
   const { redirectToMain } = useInteractionStore();
 
@@ -37,7 +37,7 @@ export default function SplashPage() {
       clearInterval(typingInterval)
       clearInterval(cursorInterval)
     }
-  })
+  }, [])
 
   useEffect(() => {
     if (inputRef.current) {
