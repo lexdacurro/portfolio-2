@@ -17,9 +17,9 @@ export default function PersonalProjectList() {
       <div className="container py-8">
       
       {
-        items.map((element) => (
+        items.map((element : any) => (
           element.text != "Personal Projects" ||
-          element.items.map((subitem, subindex) =>(
+          element.items.map((subitem : any, subindex : any) =>(
           
             <div className="mb-3" key={subindex} id={subitem.link}> 
               <p className="text-[18px] font-semibold">
@@ -27,7 +27,7 @@ export default function PersonalProjectList() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4"> 
               {
-                subitem.projects.map((r,i)=>(
+                subitem.projects.map((r : any,i : any)=>(
                   <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl dark:bg-gray-950 my-5 " key={i}>
                     
                     <Link href={r.link || "#"} target="_blank">  

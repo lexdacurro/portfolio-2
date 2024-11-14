@@ -11,9 +11,9 @@ export default function ExperienceList() {
         
         <ul role="list" className="">
         {
-          items.map((element) => (
+          items.map((element : any) => (
             element.text == "Work Experience" ?
-            element.items.map((subitem, subindex) =>(
+            element.items.map((subitem : any, subindex : any) =>(
               <li className="flex justify-between gap-x-6 py-5" key={subindex} id={subitem.link}>
                 <div className="flex min-w-0 gap-x-4">
                   <div className="min-w-0 flex-auto">
@@ -29,7 +29,7 @@ export default function ExperienceList() {
                     
                     <ul className="list-disc pl-[20px] light:text-gray-800">
                       {
-                        subitem.responsibilities.map((r,i)=>(
+                        subitem.responsibilities.map((r : any,i : any)=>(
                           <li key={i}>
                               <p className="text-base-[18px]">
                               { r } 

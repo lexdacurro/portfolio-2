@@ -10,10 +10,10 @@ export default function SkillsList() {
     <div className="container lg:w-3/4 sm:w-auto">
         <div className="text-[20px] font-bold underline underline-offset-8 "> Skills </div>
         <div>
-          { items.map((element) => (
+          { items.map((element : any) => (
               
               element.text == "Skills" ?
-              element.items.map((subitem, subindex) =>(
+              element.items.map((subitem : any, subindex : any) =>(
                 <div className="flex justify-between gap-x-6 py-5" key={subindex} id={subitem.link}>
                   <div className="flex min-w-0 gap-x-4">
                     <div className="min-w-0 flex-auto">
@@ -23,7 +23,7 @@ export default function SkillsList() {
                       
                       <div className="flex flex-wrap gap-1">
                         {
-                          subitem.stack.map((r,i)=>(
+                          subitem.stack.map((r : any, i : any)=>(
                             <Badge key={i}>{r}</Badge>
                           ))
                         }

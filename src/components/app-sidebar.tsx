@@ -1,4 +1,5 @@
 "use client"
+import React from "react"
 import { Download } from "lucide-react"
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
@@ -43,10 +44,10 @@ export function AppSidebar() {
                 <SidebarGroup />
                 <SidebarGroupContent>
                     <SidebarMenu>
-                          {items.map((menuItem, index) => (
+                          {items.map((menuItem : any, index : any) => (
                                 <div key={index}>
                                     <SidebarGroupLabel>{menuItem.text}</SidebarGroupLabel>
-                                    {menuItem.items.map((item, subIndex) => (
+                                    {menuItem.items.map((item : any, subIndex : any) => (
                                        
                                         <SidebarMenuItem key={subIndex}>
                                             <SidebarMenuButton asChild>

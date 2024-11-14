@@ -91,8 +91,7 @@ export default function RootLayout({
                             <DialogTitle>
                               Thank you! Arigato! Danke! Salamat!</DialogTitle>
                             {/* <DialogDescription> */}
-                              <SparklesText text=" Thank you so much for your Interest! If you'd like to hire me or if you'd like us to work together contact me using the email below:
-                              " className="text-md font-light"> </SparklesText>
+                              <SparklesText text=" Thank you so much for your Interest! If you'd like to hire me or if you'd like us to work together contact me using the email below:" className="text-md font-light"> </SparklesText>
                               <div className="flex items-center space-x-2 pt-4">
                                 <div className="grid flex-1 gap-2">
                                   <Label htmlFor="link" className="sr-only">
