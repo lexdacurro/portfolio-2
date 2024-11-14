@@ -58,7 +58,7 @@ export default function Home() {
         <div className="my-4 font-light flex flex-col gap-2">
           <p> Born and raised in the Philippines, I moved to the USA a few years ago (feels like ages ago, honestly 😅). I&apos;m an aviation enthusiast at heart—always dreamed of being a pilot. But then Friendster came along and completely changed the game for me. Suddenly, I was all about designing web pages instead of flying planes! ✈️</p>
 
-          <p>I&apos;ve always thought of myself as an artist, and web design gave me the creative freedom I never knew I needed. I dove into web development pretty early on—learning HTML/CSS and jQuery during the Friendster &quot;epidemic&quot;" that swept across the Philippines on the later 2000s</p>
+          <p>I&apos;ve always thought of myself as an artist, and web design gave me the creative freedom I never knew I needed. I dove into web development pretty early on—learning HTML/CSS and jQuery during the Friendster &quot;epidemic&quot; that swept across the Philippines on the later 2000s</p>
 
           <p> I kicked off my career as an intern, and by the time I turned 19, I was already working as a UI Designer/Developer for a small tech startup in the Philippines. And that, my friends, was the spark that launched my career journey! 🚀</p>
         </div>
