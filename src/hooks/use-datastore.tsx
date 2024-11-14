@@ -7,7 +7,7 @@ interface DataStore {
 
 const useDataStore = create<DataStore>((set) => ({
     items: [], 
-    appendItems: (newItems) =>  set((state) => ({ items: [...newItems] }))
+    appendItems: (newItems) =>  set(() => ({ items: [...newItems] }))
     
 }));
 

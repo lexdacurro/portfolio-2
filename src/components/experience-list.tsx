@@ -1,5 +1,4 @@
 "use client"
-import React, {useEffect, useState} from "react";
 import useDataStore from "@/hooks/use-datastore";
 
 export default function ExperienceList() {

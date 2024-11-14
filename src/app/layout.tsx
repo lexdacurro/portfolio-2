@@ -2,7 +2,6 @@
 import React, { useState, useEffect} from "react";
 
 import { Copy } from "lucide-react";
-import localFont from "next/font/local";
 import "./globals.css";
 import { Noto_Sans } from 'next/font/google'
 import { ThemeProvider } from "@/components/theme-provider";

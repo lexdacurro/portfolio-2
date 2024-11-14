@@ -5,7 +5,7 @@ import { Search } from 'lucide-react'
 import useInteractionStore from '@/hooks/use-interaction'
 export default function SplashPage() {
   const [text, setText] = useState('')
-  const [showCursor, setShowCursor] = useState(true)
+  const [setShowCursor] = useState(true)
  
   const { redirectToMain } = useInteractionStore();
 

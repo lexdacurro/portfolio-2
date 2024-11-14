@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { CalendarIcon, HomeIcon, MailIcon, PencilIcon, FacebookIcon } from "lucide-react";
+import { HomeIcon, MailIcon } from "lucide-react";
 import ThemeSwitcher from "@/app/widget/themeSwitcher";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
