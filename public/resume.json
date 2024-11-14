@@ -1,0 +1,158 @@
+[
+    {
+      "text": "Personal Information",
+      "items": [
+        {
+          "text": "About Me",
+          "link": "about"
+        }
+      ]
+    },
+    {
+      "text": "Work Experience",
+      "items": [
+        {
+            "text": "United States Geological Survey",
+            "link": "work1",
+            "position" : "Web Specialist III (Fullstack Developer) ",
+            "year" : "2018 - Present",
+            "location" : "Remote",
+            "description" : "Full-stack Developer for Lower Missisippi Gulf Water Science Center.",
+            "responsibilities" : [
+                "Led a team of developers on developing key web-based application used by the center, state stakeholders and academia.",
+                "Led the team that migrates legacy database to PostgreSQL with zero downtime. ",
+                "Lead Developer of web-based application used by Farmers, Contractors, Drillers and State/County Cooperators in Arkansas in conjuction with the Natural Resources Division - Arkansas Department of Agriculture",
+                "Communicates regularly with stakeholders to ensure transparency and accuracy",
+                "Communicates regularly with stakeholders to ensure transparency and accuracy",
+                "Helped Scientists on Data Modeling efforts such as Data Wrangling and ETL",
+                "Communicates with team members to ensure scalability, efficiency and accuracy. Manages and mentors junior developers"
+
+            ]
+          
+        },
+        
+        {
+            "text": "OTR Capital",
+            "link": "work2",
+            "position" : "Software Engineer",
+            "year" : "December 2017- January 2018",
+            "location" : "Roswell, GA USA",
+            "description" : "Mid-Level Software Engineer responsible for developing and enhancing existing features.",
+            "responsibilities" : ["Contributed to developing and enhancing a trucking application used across the eastern seaboard, collaborating with with cross-functional teams to gather requirements, define features, and ensure high-quality code through reviews and feedback"]
+        },
+        {
+            "text": "High-bits Incorporated",
+            "link": "work3",
+            "position" : "Junior Developer",
+            "year" : "2012-2014",
+            "location" : "Mandaluyong, Metro Manila, Philippines",
+            "description" : "Full-stack Developer for Lower Missisippi Gulf Water Science Center.",
+            "responsibilities" : [
+                "UI Developer for their in-house CRM application",
+                "UI Developer for their in-house CMS application",
+                "Core Developer for their Financial Accounting System",
+                "Collaborated with developers and stakeholders on implementing new features and enhancements ensuring high performance and responsiveness",
+                "Communicates regularly with stakeholders to ensure transparency and accuracy",
+                "Helped Maintain Web server and provided in-person support with the stakeholder"
+
+            ]
+            
+        }
+      ]
+    },
+    {
+      "text": "Skills",
+      "items": [
+        {
+          "text": "Web Development (Frontend)",
+          "link": "#skills-webdev",
+          "stack" : ["Vue/Nuxt", "React/Next","JavaScript/Node.js","TypeScript", "jQuery", "CSS Post/Preprocessor (SASS,SCSS)","HTMl", "WCAG", "Playwright","Jest"]
+        },
+        {
+          "text": "Design (UI/UX, Graphic Design)",
+          "link": "#work2",
+          "stack" : ["Wireframing", "Prototyping", "User Testing","Front-end Development","Interactive & Responsive Design","User Research","Figma","Photoshop","Illustrator"]
+        },
+        {
+          "text": "Development (Backend/Data Science)",
+          "link": "#work3",
+          "stack" : ["PHP/Laravel","Python","Visualization (Plotly, OpenLayers)", "RestAPI", "Relational DB: Postgre/My/MS SQL", "NoSQL DB: MongoDB"]
+        }
+      ]
+    },
+    {
+      "text": "Personal Projects",
+      "items": [
+        {
+          "text": "Case Studies",
+          "link": "#case-studies",
+          "projects" : [
+            {
+              "title" : "Philippine Airlines Mobile App Redesign Concept",
+              "img" : "PAL-case-study.png",
+              "type" : "UI/UX Design, Case Study & Mobile App Concept",
+              "stack" : "Figma, Photoshop",
+              "link" : "https://www.behance.net/gallery/176972579/Philippine-Airlines-Mobile-App-Redesign-Concept"
+            }
+          ]
+        },
+        {
+          "text": "Web Design",
+          "link": "#web-design",
+          "projects" : [
+            {
+              "title" : "Stellar Fishing Boats",
+              "img" : "stellarWebpage.png",
+              "type" : "Web Page, Web Design",
+              "stack" : "PHP (Wordpress | Elementor), MySQL",
+              "link" : "https://stellarfishingboats.com"
+            },
+            {
+              "title" : "Polar Fishing Boats",
+              "img" : "PolarWebpage.png",
+              "type" : "Web Page, Web Design",
+              "stack" : "PHP (Wordpress | Elementor), MySQL",
+              "link" : "https://polarfishingboats.com"
+            }
+          ]
+        },
+        {
+          "text": "Others",
+          "link": "#work3",
+          "projects" : [
+            {
+              "title" : "Stellar Fishing Boats - Boat Products Flyer Pamphlet",
+              "img" : "Stellar_SocialMediaFlyer-Watermarked.png",
+              "type" : "Pamphlet Design, Marketing",
+              "stack" : "Figma, Photoshop",
+              "link" : ""
+            },
+            {
+              "title" : "Stellar Fishing Boats - 335cc Boat Product Flyer Pamphlet",
+              "img" : "335-Social Media Story-Watermarked.png",
+              "type" : "Pamphlet Design, Marketing",
+              "stack" : "Figma, Photoshop",
+              "link" : ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Contact",
+      "items": [
+        {
+          "text": "Contact Information",
+          "link": "#contact-me"
+        },
+        {
+          "text": "Let's work together!",
+          "link": "#work-together"
+        },
+        {
+          "text": "#HireMe",
+          "link": "#work3"
+        }
+      ]
+    }
+  ]
