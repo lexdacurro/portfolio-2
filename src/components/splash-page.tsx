@@ -36,7 +36,7 @@ export default function SplashPage() {
       clearInterval(typingInterval)
       clearInterval(cursorInterval)
     }
-  }, [])
+  })
 
   useEffect(() => {
     if (inputRef.current) {
