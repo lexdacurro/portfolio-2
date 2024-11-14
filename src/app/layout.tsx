@@ -38,7 +38,11 @@ const NotoSans = Noto_Sans({
 // };
 
 // export
-export default function RootLayout() {
+export default function RootLayout({
+    children,
+  }: Readonly<{
+    children: React.ReactNode;
+  }>) {
   const { isClicked } = useInteractionStore();
   const [showHome, setShowHome]  = useState(false);
   
