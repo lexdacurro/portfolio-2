@@ -38,7 +38,7 @@ const Icons = {
 
 const DATA = {
   navbar: [
-    { href: "#", icon: HomeIcon, label: "Home" },
+    { href: "/", icon: HomeIcon, label: "Home" },
   ],
   contact: {
     social: {
@@ -114,7 +114,7 @@ export default function CustomDock() {
             </DockIcon>
           ))}
           <Separator orientation="vertical" className="h-full py-2" />
-          <DockIcon>
+          <DockIcon key="switcher">
             <Tooltip>
               <TooltipTrigger asChild>
                 <ThemeSwitcher />

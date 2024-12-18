@@ -1,0 +1,15 @@
+{
+    "frames": {
+      "walk1.png": { "frame": { "x": 0, "y": 0, "w": 64, "h": 64 } },
+      "walk2.png": { "frame": { "x": 64, "y": 0, "w": 64, "h": 64 } },
+      "walk3.png": { "frame": { "x": 128, "y": 0, "w": 64, "h": 64 } }
+    },
+    "meta": {
+      "image": "sprites/shinobi/Walk.png",
+      "size": { "w": 256, "h": 256 },
+      "scale": "1"
+    },
+    "animations": {
+      "walk": ["walk1.png", "walk2.png", "walk3.png"]
+    }
+  }

@@ -4,6 +4,7 @@ import { Download } from "lucide-react"
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import Link from "next/link";
+
 import {
 Sidebar,
 SidebarContent,
@@ -18,12 +19,12 @@ SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import useDialogStore  from "@/hooks/use-dialogstore";
 import useDataStore from "@/hooks/use-datastore";
-
-// define the structure of the JSON
+import { HomeIcon } from "lucide-react"
+import { useRouter } from 'next/navigation'
 
 export function AppSidebar() {
   
-
+    const router = useRouter();
     const {  openDialog } = useDialogStore();
 
     const { items }  = useDataStore();
@@ -44,22 +45,30 @@ export function AppSidebar() {
                 <SidebarGroup />
                 <SidebarGroupContent>
                     <SidebarMenu>
-                          {items.map((menuItem : any, index : any) => (
-                                <div key={index}>
-                                    <SidebarGroupLabel>{menuItem.text}</SidebarGroupLabel>
-                                    {menuItem.items.map((item : any, subIndex : any) => (
-                                       
-                                        <SidebarMenuItem key={subIndex}>
-                                            <SidebarMenuButton asChild>
-                                                <Link href={`#${item.link}`}>
-                                                {/* <item.icon /> */}
-                                                <span>{item.text}</span>
-                                                </Link> 
-                                            </SidebarMenuButton>
-                                        </SidebarMenuItem> 
-                                    ))}
-                                </div>
-                            ))}
+                        <SidebarGroupLabel>Navigation</SidebarGroupLabel>
+                        <SidebarMenuItem>
+                            <SidebarMenuButton onClick={()=>{ router.push('/')}}> 
+                                <HomeIcon/> Home 
+                            </SidebarMenuButton>
+                        </SidebarMenuItem>
+                       
+                        
+                        {items.map((menuItem : any, index : any) => (
+                            <div key={index}>
+                                <SidebarGroupLabel>{menuItem.text}</SidebarGroupLabel>
+                                {menuItem.items.map((item : any, subIndex : any) => (
+                                    
+                                    <SidebarMenuItem key={subIndex}>
+                                        <SidebarMenuButton asChild>
+                                            <Link href={`#${item.link}`}>
+                                            {/* <item.icon /> */}
+                                            <span>{item.text}</span>
+                                            </Link> 
+                                        </SidebarMenuButton>
+                                    </SidebarMenuItem> 
+                                ))}
+                            </div>
+                        ))}
                     </SidebarMenu>
                 </SidebarGroupContent>
                 <SidebarGroup />

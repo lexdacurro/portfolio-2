@@ -23,7 +23,7 @@ import useInteractionStore from '@/hooks/use-interaction';
 import useDialogStore from "@/hooks/use-dialogstore";
 import BlurFade from "@/components/ui/blur-fade";
 import CustomDock from "./widget/customDock";
-
+import ThemeSwitcher from "./widget/themeSwitcher";
 const NotoSans = Noto_Sans({
   subsets: ['latin'],
   weight: ['100','200','300','400','500','600','700'], 
@@ -43,7 +43,7 @@ export default function RootLayout({
   }: Readonly<{
     children: React.ReactNode;
   }>) {
-  const { isClicked } = useInteractionStore();
+  const { isClicked, isSideBarOpen} = useInteractionStore();
   const [showHome, setShowHome]  = useState(false);
   
   const { isOpen, closeDialog } = useDialogStore();
@@ -53,14 +53,20 @@ export default function RootLayout({
     }
   }, [isClicked]);
   useEffect(() => {
-    console.log('Updated showHome:', showHome); 
+    // console.log('Updated showHome:', showHome); 
+    document.body.style.overflowY = !showHome ? 'hidden' : 'auto'
   
-}, [showHome]);
+  }, [showHome]);
 
   return (
     <>
       <html lang="en" suppressHydrationWarning>
-        <head/>
+        <head>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"
+          />
+        </head>
         <body className={`${NotoSans.className} antialiased`}>
           
           <ThemeProvider
@@ -69,54 +75,46 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <main className="container mx-auto px-4 py-12">
+            <div className="py-12">
              
               {
                 !showHome ?   
                 <SplashPage/> :  
+                <div className="main">
+                  {children}
                 
-                <SidebarProvider>
-                  <AppSidebar />
-                  
-                  <CustomDock />
-                  <BlurFade delay={0.25}>
-                    
-                    <main className="container mx-auto px-4 py-12">
-                    
-                      {children}
-                      <Dialog open={isOpen} onOpenChange={closeDialog}>
-                        {/* <DialogTrigger>{value.toString()}</DialogTrigger> */}
-                        <DialogContent>
-                          <DialogHeader>
-                            <DialogTitle>
-                              Thank you! Arigato! Danke! Salamat!</DialogTitle>
-                            {/* <DialogDescription> */}
-                              <SparklesText text=" Thank you so much for your Interest! If you'd like to hire me or if you'd like us to work together contact me using the email below:" className="text-md font-light"> </SparklesText>
-                              <div className="flex items-center space-x-2 pt-4">
-                                <div className="grid flex-1 gap-2">
-                                  <Label htmlFor="link" className="sr-only">
-                                    Link
-                                  </Label>
-                                  <Input
-                                    id="link"
-                                    defaultValue="alexedacurro@gmail.com"
-                                    readOnly
-                                  />
-                                </div>
-                                <Button type="submit" size="sm" className="px-3">
-                                  <span className="sr-only">Copy</span>
-                                  <Copy />
-                                </Button>
+                  <Dialog open={isOpen} onOpenChange={closeDialog} >
+                    {/* <DialogTrigger>{value.toString()}</DialogTrigger> */}
+                    <DialogContent>
+                      <DialogHeader>
+                        <DialogTitle>
+                          Thank you! Arigato! Danke! Salamat!</DialogTitle>
+                        {/* <DialogDescription> */}
+                          <SparklesText text=" Thank you so much for your Interest! If you'd like to hire me or if you'd like us to work together contact me using the email below:" className="text-md font-light"> </SparklesText>
+                          <div className="flex items-center space-x-2 pt-4">
+                            <div className="grid flex-1 gap-2">
+                              <Label htmlFor="link" className="sr-only">
+                                Link
+                              </Label>
+                              <Input
+                                id="link"
+                                defaultValue="alexedacurro@gmail.com"
+                                readOnly
+                              />
                             </div>
-                            {/* </DialogDescription> */}
-                          </DialogHeader>
-                        </DialogContent>
-                      </Dialog>
-                    </main>
-                  </BlurFade>
-                </SidebarProvider>
+                            <Button type="submit" size="sm" className="px-3">
+                              <span className="sr-only">Copy</span>
+                              <Copy />
+                            </Button>
+                        </div>
+                        {/* </DialogDescription> */}
+                      </DialogHeader>
+                    </DialogContent>
+                  </Dialog>
+                </div>
+                 
               }
-            </main>
+            </div>
           </ThemeProvider>
           {/* { children } */}
         </body>

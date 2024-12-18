@@ -6,14 +6,16 @@ import {
   Card
 } from "@/components/ui/card"
 import useDataStore from "@/hooks/use-datastore";
+import { Badge } from "@/components/ui/badge"
 
 export default function PersonalProjectList() {
   const { items } = useDataStore();
  
 
   return (
-    <div className="container lg:w-3/4 sm:w-auto">
-      <div className="text-[20px] font-bold underline underline-offset-8"> Personal Projects </div>
+    <div className="container lg:w-3/4 sm:w-auto my-10">
+      <div className="text-[20px] font-bold underline underline-offset-8 "> Personal Projects </div>
+      <div className="text-[15px] pt-4"> Below are my most recent personal projects:</div>
       <div className="container py-8">
       
       {
@@ -31,7 +33,7 @@ export default function PersonalProjectList() {
                   <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl dark:bg-gray-950 my-5 " key={i}>
                     
                     <Link href={r.link || "#"} target="_blank">  
-                      <Card className="group relative w-full max-w-lg overflow-hidden" >
+                      <Card className="group relative w-50 max-w-lg overflow-hidden" >
                         <div className="relative aspect-[16/10]">
                           {/* Background image */}
                           <Image
@@ -50,10 +52,12 @@ export default function PersonalProjectList() {
                             <p className="text-sm text-white/90">
                               { r.type }
                             </p>
-                            <p className="text-xs text-white/70">
-                              { r.stack }
-                            </p>
-                            
+                            { 
+                              r.stack.split(",").map((element : any, idx : any) => {
+                                return <Badge key={element} className="mx-1">{element}</Badge>
+                              })
+                            } 
+                                                  
                           </div>
                         </div>
                       </Card>        
