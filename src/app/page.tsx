@@ -114,16 +114,16 @@ export default function Home() {
         */}
       { 
         hideCoolEffects &&   
-        <div className={`container mx-auto flex gap-3 items-center transition-opacity ease-in-out delay-150`}> 
+        <div className={`container mx-auto px-6 flex gap-3 items-center transition-opacity ease-in-out delay-150`}> 
         { !showNextEffect ? <LoadingSpinner className="w-5"></LoadingSpinner> : "✅" }
         
-        <TypingAnimation className="text-md font-mono" text={text} duration={20} key={text}></TypingAnimation>
+        <TypingAnimation className="text-md px-6 font-mono" text={text} duration={20} key={text}></TypingAnimation>
       </div>
       }
       
       {
         showDecryptEffect && 
-        <div className="container mx-auto flex gap-3 items-center "> 
+        <div className="container px-6 mx-auto flex gap-3 items-center "> 
           <LoadingSpinner className="w-5"></LoadingSpinner>
           <HyperText className="text-md font-mono" text="Decrypting & Generating Profile..." duration={2}></HyperText>
         </div>
@@ -133,7 +133,7 @@ export default function Home() {
         showProfile && 
           <div id="my-profile">
             <BlurFade delay={0.5}>  
-              <div className="container mx-auto h-[80vh] flex flex-col justify-center transition-opacity ease-in-out delay-100">
+              <div className="container mx-auto h-[80vh] px-6 flex flex-col justify-center transition-opacity ease-in-out delay-100">
               
                 <div className="text-[40px] font-extrabold flex gap-3 items-center"> 
                      
@@ -169,9 +169,9 @@ export default function Home() {
                 <TextReveal text="A Little something about me" ></TextReveal>
               
               </div>
-              <div className="container mx-auto ">
+              <div className="container mx-auto px-6 sm:h-80">
                 <div id="storyblock-3">
-                  <div className="container h-[40vh] flex flex-col justify-start transition-opacity ease-in-out delay-100" id="about"> 
+                  <div className="container lg:h-[40vh] h-[80vh] flex flex-col justify-start transition-opacity ease-in-out delay-100" id="about"> 
                     <div className="text-[20px] font-bold underline underline-offset-8"> My Story</div>
                     <div className="my-4 font-light flex flex-col gap-2 dark:text-gray-200">
                       <p className="leading-9"> Born and raised in the Philippines, I moved to the USA a few years back (feels like forever 😅). Aviation was my first love—always dreamed of being a pilot! But then Friendster came along and changed everything. Suddenly, I was designing web pages instead of planning flight paths! ✈️</p>
@@ -184,7 +184,7 @@ export default function Home() {
               </div>
              
               <BlurFade duration={0.5}>
-                <div id="storyblock-4">
+                <div id="storyblock-4" className="px-6">
                     {/* <TextReveal text="My Web Developer Journey"></TextReveal> */}
                     {/* <TextReveal text="About Me"></TextReveal> */}
                   <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden ">
@@ -195,23 +195,23 @@ export default function Home() {
                     <RetroGrid />
                   </div>
                 </div>
-                <div id="storyblock-5" className="container mx-auto">
+                <div id="storyblock-5" className="container mx-auto px-6">
                   <ExperienceList headerText="The Journey" />
                   
                 </div>
               </BlurFade>
               <div id="storyblock-5" className="py-16">
-                <TextReveal className="h-[90vh]" text="I also design website! "/>
-                <TextReveal className="h-[50vh]" text="Well, Here are my latest work"/>
+                <TextReveal className="h-[90vh]" text="I also design websites on my freetime! "/>
+                <TextReveal className="h-[50vh]" text="Here are my latest work"/>
 
               </div>
-              <div id="storyblock-5" className="container mx-auto py-16">
+              <div id="storyblock-5" className="container mx-auto py-16 px-6">
                 <PersonalProjectList/>
 
               </div>
-              <div id="storyblock-6" className="py-12 container mx-auto ">
-                {/* <HyperText text="Skills"></HyperText>
-                 */}
+              <div id="storyblock-6" className="lg:py-12 container mx-auto max-sm:hidden">
+                {/* <HyperText text="Skills"></HyperText> */}
+                
               
                 <div className="h-screen flex flex-col gap-4 justify-center items-center">
                   <div className="relative overflow-hidden bg-background px-20 pb-20 pt-8 ">
@@ -226,10 +226,10 @@ export default function Home() {
                   className="font-display text-center text-md font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-6xl md:leading-[5rem]"
                 /> */}
               </div>
-              <div id="storyblock-6" className="py-12 container mx-auto ">
+              <div id="storyblock-6" className="py-12 container mx-auto px-6">
                 <SkillsList></SkillsList>
               </div>
-              <div id="storyblock-7" className="py-12 container mx-auto ">
+              <div id="storyblock-7" className="py-12 container mx-auto px-6">
                 {/* <TextReveal className="h-[50vh]" text="Let's work together! You can contact me using the links below!"/> */}
                 <div className="flex justify-center items-center h-[70vh]">
                   <WordPullUp
