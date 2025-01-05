@@ -2,6 +2,7 @@ import { create } from 'zustand';
 
 interface DataStore {
     items: string[]; 
+    fetchItems : () => Promise<void>;
     appendItems: (newItems: string[]) => void; 
 }
 const useDataStore = create<DataStore>((set) => ({
