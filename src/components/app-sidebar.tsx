@@ -61,7 +61,6 @@ export function AppSidebar() {
                                     <SidebarMenuItem key={subIndex}>
                                         <SidebarMenuButton asChild>
                                             <Link href={`#${item.link}`}>
-                                            {/* <item.icon /> */}
                                             <span>{item.text}</span>
                                             </Link> 
                                         </SidebarMenuButton>

@@ -22,7 +22,7 @@ export default function Home() {
   
   const fetchAndAppendItems = async () => {
     try {
-      const response = await fetch('/resume.json');
+      const response = await fetch('/data/resume.json');
       const newData: [] = await response.json();
       appendItems(newData); 
     } catch (error) {
