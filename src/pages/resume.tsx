@@ -18,23 +18,11 @@ import useDataStore from "@/hooks/use-datastore";
 
 export default function Home() {
 
-  const { appendItems } = useDataStore();
+  const { items } = useDataStore();
   
-  const fetchAndAppendItems = async () => {
-    try {
-      const response = await fetch('/data/resume.json');
-      const newData: [] = await response.json();
-      appendItems(newData); 
-    } catch (error) {
-      console.error('Failed to fetch data:', error);
-    }
-  };
-
-  useEffect(() => {
-    fetchAndAppendItems();
-  });
-
- 
+  useEffect(()=>{
+    console.log(items)
+  },[items])
 
   return (
     // <BlurFade delay={0.04} yOffset={8} inView> </BlurFade>

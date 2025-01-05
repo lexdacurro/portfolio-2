@@ -6,8 +6,6 @@ import ExperienceList from "@/components/experience-list";
 import SkillsList from "@/components/skill-list";
 import PersonalProjectList from "@/components/personal-project-list";
 
-import useDataStore from "@/hooks/use-datastore";
-
 
 // import BlurFade from "@/components/ui/blur-fade";
 import TypingAnimation from "@/components/ui/typing-animation";
@@ -19,13 +17,14 @@ import { LoadingSpinner } from "@/components/ui/loading-spinner";
 import { FadeText } from "@/components/ui/fade-text";
 import BlurFade from "@/components/ui/blur-fade";
 import { VelocityScroll } from "@/components/ui/scroll-based-velocity";
-import { ArrowDownCircle, ArrowUpCircle } from "lucide-react";
+import { ArrowDownCircle, ArrowUpCircle, FileUser } from "lucide-react";
 import RetroGrid from "@/components/ui/retro-grid";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import IconCloud from "@/components/ui/icon-cloud";
 import CustomDock from "./widget/customDock";
 import WordPullUp from "@/components/ui/word-pull-up";
 import ThemeSwitcher from "./widget/themeSwitcher";
+import useDataStore from "@/hooks/use-datastore";
 const slugs = [
   "typescript",
   "javascript",
@@ -55,19 +54,14 @@ export default function Home() {
   const [showNextEffect, setNextEffect] = useState(false)
   const [showDecryptEffect, setDecryptEffect] = useState(false)
   const [showProfile, setProfile] = useState(false)
-  const {appendItems} = useDataStore()
   const [isBottomScrollerVisible, setBottomScrollerVisible] = useState(true)
+      
+  const { items, fetchItems  } = useDataStore();
+  useEffect(()=>{
+    fetchItems()
+  },[fetchItems])
 
 
-  const fetchAndAppendItems = async () => {
-    try {
-      const response = await fetch('/data/resume.json');
-      const newData: [] = await response.json();
-      appendItems(newData); 
-    } catch (error) {
-      console.error('Failed to fetch data:', error);
-    }
-  }
   const handleScroll = () => {
     const scrolledToBottom =
       window.innerHeight + window.scrollY >= document.body.offsetHeight;
@@ -100,7 +94,6 @@ export default function Home() {
    
     window.addEventListener('scroll', handleScroll);
     return () => {
-      fetchAndAppendItems()
       clearTimeout(timer1)
       clearTimeout(timer2)
       clearTimeout(timer3)
@@ -235,6 +228,10 @@ export default function Home() {
               isBottomScrollerVisible ? <ArrowDownCircle className="w-5 h-5" /> : <ArrowUpCircle className="w-5 h-5" />
             }
             <span className="text-sm font-medium">{ isBottomScrollerVisible ? "Scroll to continue" : "Scroll to go back" } </span>
+          </div>
+          <div className="fixed bottom-4 left-4 flex items-center space-x-2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-full shadow-lg animate-bounce z-50">
+            <FileUser className="w-5 h-5"/>
+            <span className="text-sm font-medium"> View Resume </span>
           </div>
          </div>
       }

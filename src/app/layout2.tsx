@@ -23,7 +23,7 @@ import useInteractionStore from '@/hooks/use-interaction';
 import useDialogStore from "@/hooks/use-dialogstore";
 import BlurFade from "@/components/ui/blur-fade";
 import CustomDock from "./widget/customDock";
-
+import useDataStore from "@/hooks/use-datastore";
 const NotoSans = Noto_Sans({
   subsets: ['latin'],
   weight: ['100','200','300','400','500','600','700'], 
@@ -44,10 +44,14 @@ export default function Layout2({
     children: React.ReactNode;
   }>) {
   const { isClicked, isSideBarOpen} = useInteractionStore();
- 
+    
+  const { items, fetchItems  } = useDataStore();
+
   const { isOpen, closeDialog } = useDialogStore();
  
-
+  useEffect(()=>{
+    fetchItems()
+  },[fetchItems])
   return (
     <>
       
@@ -60,13 +64,11 @@ export default function Layout2({
             <main className="container mx-auto px-4 py-12">
               <SidebarProvider>
                 <AppSidebar />
-                <div id="contact">
-                  <CustomDock/>
-                </div>
+               
+                <CustomDock/>
                 <BlurFade delay={0.25}>
                   
                   <main className="container mx-auto px-4 py-12">
-                  
                     {children}
                     <Dialog open={isOpen} onOpenChange={closeDialog}>
                       {/* <DialogTrigger>{value.toString()}</DialogTrigger> */}

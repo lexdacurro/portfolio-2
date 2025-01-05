@@ -58,17 +58,17 @@ export default function SplashPage() {
       {/* <div className="absolute left-6 top-6">
         <h1 className="text-xl font-semibold text-white">My Resume</h1>
       </div> */}
-      <div className="absolute bottom-2 right-1">
-      <TooltipProvider>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <ThemeSwitcher />
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>DARK MODE</p>
-          </TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
+      <div className="fixed bottom-4 right-4">
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <ThemeSwitcher />
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>DARK MODE</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
       </div>
       <div className="flex flex-col items-center justify-center min-h-screen gap-6">
      
@@ -109,7 +109,7 @@ export default function SplashPage() {
         <Badge className="cursor-pointer" onClick={() => router.push('/resume')}>
           Skip to the good part
         </Badge>
-        <div className="fixed bottom-4 text-muted-foreground text-[10px] "> Powered by 
+        <div className="fixed bottom-5 text-muted-foreground text-[10px] "> Powered by 
           💞 Next.js + Tailwind </div>
       </div>
       

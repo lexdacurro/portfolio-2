@@ -8,6 +8,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { SidebarProvider } from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/app-sidebar"
 
+
 import {
   Dialog,
   DialogContent,
@@ -24,6 +25,7 @@ import useDialogStore from "@/hooks/use-dialogstore";
 import BlurFade from "@/components/ui/blur-fade";
 import CustomDock from "./widget/customDock";
 import ThemeSwitcher from "./widget/themeSwitcher";
+import useDataStore from "@/hooks/use-datastore";
 const NotoSans = Noto_Sans({
   subsets: ['latin'],
   weight: ['100','200','300','400','500','600','700'], 
@@ -45,18 +47,16 @@ export default function RootLayout({
   }>) {
   const { isClicked, isSideBarOpen} = useInteractionStore();
   const [showHome, setShowHome]  = useState(false);
-  
+
   const { isOpen, closeDialog } = useDialogStore();
   useEffect(() => {
     if (isClicked) {
       setShowHome(true); 
     }
-  }, [isClicked]);
-  useEffect(() => {
-    // console.log('Updated showHome:', showHome); 
     document.body.style.overflowY = !showHome ? 'hidden' : 'auto'
-  
-  }, [showHome]);
+
+  }, [isClicked, showHome]);
+    
 
   return (
     <>
@@ -82,7 +82,6 @@ export default function RootLayout({
                 <SplashPage/> :  
                 <div className="main">
                   {children}
-                
                   <Dialog open={isOpen} onOpenChange={closeDialog} >
                     {/* <DialogTrigger>{value.toString()}</DialogTrigger> */}
                     <DialogContent>
