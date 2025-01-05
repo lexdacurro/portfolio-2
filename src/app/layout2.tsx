@@ -60,8 +60,9 @@ export default function Layout2({
             <main className="container mx-auto px-4 py-12">
               <SidebarProvider>
                 <AppSidebar />
-                
-                <CustomDock />
+                <div id="contact">
+                  <CustomDock/>
+                </div>
                 <BlurFade delay={0.25}>
                   
                   <main className="container mx-auto px-4 py-12">

@@ -112,3 +112,12 @@ body {
   max-width: 420px;
   z-index: 9000;
 }
+.fade-bottom ::before{
+  content: '';
+  background-image: linear-gradient(to top, rgba(46, 46, 46, 1), rgba(239,239,239,0));
+  position: absolute;
+  height: 100px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

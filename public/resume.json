@@ -59,16 +59,17 @@
            ]
         },
         {
-           "text":"YOUR COMPANY HERE",
+           "text":"YOUR COMPANY HERE 👈",
            "link":"work1",
            "position":"Front-end/Fullstack Developer?",
            "year":"Future #goals",
-           "location":"Anywhere | \"Wherever you go that's where I follow\" - Bruno Mars & Lady Gaga", 
-           "description":"Hopefully working as a developer at your company 🤞",
+           "location":"Anywhere! I'm open for relocation ", 
+           "description":"Hopefully working as a developer at your company or Working with you on a Project!🤞",
            "avatar":"placeholder.png",
            "responsibilities":[
               "Be an awesome developer",
-              "Ship scalable & responsive Web Application using React/Vue"
+              "Ship scalable & responsive Web Application using React/Vue",
+              "Help you with establishing your online presence"
            ]
         }
      ]
@@ -113,7 +114,7 @@
            "stack":[
               "PHP/Laravel",
               "Python",
-              "Visualization (Plotly, OpenLayers)",
+              "Visualization (Plotly, OpenLayers, ArcGIS)",
               "RestAPI",
               "Relational DB: Postgre/My/MS SQL",
               "NoSQL DB: MongoDB"

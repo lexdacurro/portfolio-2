@@ -41,7 +41,7 @@ export function AppSidebar() {
                     <span className="font-bold text-base/[18px]">Behance Profile</span>
                 </div>
             </SidebarHeader>
-            <SidebarContent className="p-7">
+            <SidebarContent className="px-7 pb-7">
                 <SidebarGroup />
                 <SidebarGroupContent>
                     <SidebarMenu>
