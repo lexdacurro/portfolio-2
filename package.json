@@ -24,6 +24,7 @@
     "pixi.js": "^7.4.2",
     "react": "19.0.0-rc-02c0e824-20241028",
     "react-dom": "19.0.0-rc-02c0e824-20241028",
+    "react-gtm-module": "^2.0.11",
     "react-icon-cloud": "^4.1.4",
     "react-router-dom": "^6.28.0",
     "tailwind-merge": "^2.5.4",
