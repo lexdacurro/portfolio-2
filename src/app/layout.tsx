@@ -26,6 +26,9 @@ import BlurFade from "@/components/ui/blur-fade";
 import CustomDock from "./widget/customDock";
 import ThemeSwitcher from "./widget/themeSwitcher";
 import useDataStore from "@/hooks/use-datastore";
+
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 const NotoSans = Noto_Sans({
   subsets: ['latin'],
   weight: ['100','200','300','400','500','600','700'], 
@@ -61,6 +64,7 @@ export default function RootLayout({
   return (
     <>
       <html lang="en" suppressHydrationWarning>
+
         <head>
         <link
             rel="stylesheet"
@@ -117,6 +121,8 @@ export default function RootLayout({
           </ThemeProvider>
           {/* { children } */}
         </body>
+        
+        <GoogleAnalytics gaId="G-LJ1RPTD9WM" />
       </html>
     </>
   )

@@ -25,7 +25,6 @@ import CustomDock from "./widget/customDock";
 import WordPullUp from "@/components/ui/word-pull-up";
 import ThemeSwitcher from "./widget/themeSwitcher";
 import useDataStore from "@/hooks/use-datastore";
-import TagManager from 'react-gtm-module';
 
 const slugs = [
   "typescript",
@@ -92,11 +91,8 @@ export default function Home() {
       setProfile(true)
       setDecryptEffect(false)
     }, 4000)
-    
-    const tagManagerArgs = {
-        gtmId: 'G-LJ1RPTD9WM'
-    };
-    TagManager.initialize(tagManagerArgs);
+
+  
     window.addEventListener('scroll', handleScroll);
     return () => {
       clearTimeout(timer1)
