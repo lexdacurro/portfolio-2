@@ -232,7 +232,7 @@ export default function Home() {
           </div>
           <div className="fixed bottom-4 left-4 flex items-center space-x-2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-full shadow-lg animate-bounce z-50">
             <FileUser className="w-5 h-5"/>
-            <span className="text-sm font-medium"> View Resume </span>
+            <span className="text-sm font-medium"> <a href="/resume"> View Resume </a></span>
           </div>
          </div>
       }
