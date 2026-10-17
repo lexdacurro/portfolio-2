@@ -44,7 +44,7 @@
                "text": "United States Geological Survey",
                "link": "work1",
                "position": "Web Specialist III (Fullstack Developer) ",
-               "year": "2018 - Present",
+               "year": "2018 - 2026",
                "location": "Remote | Little Rock, Arkansas & Nashville, Tennessee",
                "description": "Full-stack Developer for Lower Missisippi Gulf Water Science Center.",
                "avatar": "usgs.jpg",
@@ -56,6 +56,20 @@
                    "Communicates regularly with stakeholders to ensure transparency and accuracy",
                    "Helped Scientists on Data Modeling efforts such as Data Wrangling and ETL",
                    "Communicates with team members to ensure scalability, efficiency and accuracy. Manages and mentors junior developers"
+               ]
+           },
+          {
+               "text": "Bonnell Aluminum",
+               "link": "work1",
+               "position": "Software Engineer",
+               "year": "2024 - Present",
+               "location": "Newnan, GA",
+               "description": "Lead Developer | PHP-based ERP",
+               "avatar": "usgs.jpg",
+               "responsibilities": [
+                   "Lead developer of PHP-based in-house developed ERP based on BPCS",
+                   "Mulesoft Integration, Salesforce Integration"
+     
                ]
            },
            {
